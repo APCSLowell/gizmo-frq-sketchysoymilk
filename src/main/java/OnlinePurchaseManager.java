@@ -13,8 +13,7 @@ public class OnlinePurchaseManager
   {
     int sum = 0;
     for(Gizmo hi : purchases){
-      if(purchases.getMaker().equals(maker)){
-        if(purchases.isElectronic() == true)
+      if (hi.getMaker().equals(maker) && hi.isElectronic()){
         sum++;
       }
     }
@@ -32,7 +31,7 @@ public class OnlinePurchaseManager
       Gizmo hiTwo = purchases.get(i);
       if (hi.equals(hiTwo))
       {
-      return true;
+        return true;
       }
     hi = hiTwo;
 }
